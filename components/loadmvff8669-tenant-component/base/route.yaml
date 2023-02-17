@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loadmvff8669-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loadmvff8669-tenant-component
+    app.kubernetes.io/part-of: loadmvff8669-tenant-app
+  name: loadmvff8669-tenant-component
+  namespace: loadmvff8669-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: loadmvff8669-tenant-component
+    weight: null
+status: {}
